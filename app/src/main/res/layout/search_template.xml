@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="1dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_search_by_location"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/serach_item_not_selected"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Search By Location"
+            android:textColor="@color/white"
+            android:textSize="12dp"/>
+
+        <ImageView
+            android:id="@+id/iv_search_location_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/arrow_left"
+            android:rotation="270" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_search_location"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:id="@+id/btn_province"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/curved_button_background"
+            android:text="Province"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/btn_district"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/curved_button_background"
+            android:text="District"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/btn_city"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/curved_button_background"
+            android:text="City"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_search_by_company"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="2.5dp"
+        android:background="@drawable/serach_item_not_selected"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Search By Company"
+            android:textColor="@color/black"
+            android:textSize="12dp"/>
+
+        <ImageView
+            android:id="@+id/iv_search_company_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/arrow_left"
+            android:rotation="270" />
+
+    </RelativeLayout>
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="20dp"-->
+    <!--android:visibility="gone">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="5dp"-->
+    <!--android:text="Company"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="12sp"-->
+
+
+    <!--/>-->
+
+    <!--</LinearLayout>-->
+
+
+    <LinearLayout
+        android:id="@+id/ll_search_company"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etv_company_code"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_edit_text"
+            android:gravity="center_vertical"
+            android:hint="Company Code"
+            android:paddingLeft="3dp"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/etv_company_name"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_edit_text"
+            android:gravity="center_vertical"
+            android:hint="Company Name"
+            android:paddingLeft="3dp"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/et_due_date"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_edit_text"
+            android:editable="false"
+            android:gravity="center_vertical"
+            android:hint="Due Date"
+            android:paddingLeft="3dp"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_calender_customer_search"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:src="@drawable/logout_icon"
+            android:textSize="12dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/etv_contact_no"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_edit_text"
+            android:gravity="center_vertical"
+            android:hint="Contact"
+            android:paddingLeft="3dp"
+            android:phoneNumber="true"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_search_by_date"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="2.5dp"
+        android:background="@drawable/serach_item_not_selected"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Search By Date"
+            android:textColor="@color/black"
+            android:textSize="12dp"/>
+
+        <ImageView
+            android:id="@+id/iv_search_date_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/arrow_left"
+            android:rotation="270" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_start_end_date"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/et_end_date"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_edit_text"
+            android:gravity="center_vertical"
+            android:hint="Start Date"
+            android:paddingLeft="3dp"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/et_start_date"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_edit_text"
+            android:gravity="center_vertical"
+            android:hint="End Date"
+            android:paddingLeft="3dp"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:visibility="gone" />
+
+        <!--<Spinner-->
+            <!--android:id="@+id/spinner1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/background_edit_text"-->
+            <!--android:entries="@array/country_arrays"-->
+            <!--android:prompt="@string/country_prompt"-->
+            <!--android:visibility="gone"-->
+
+            <!--/>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/etv_name"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_edit_text"
+            android:gravity="center_vertical"
+            android:hint="Name"
+            android:paddingLeft="3dp"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <EditText
+            android:id="@+id/etv_nic_no"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_edit_text"
+            android:gravity="center_vertical"
+            android:hint="NIC/BR"
+            android:paddingLeft="3dp"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+
+        <EditText
+            android:id="@+id/etv_dn_no"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_edit_text"
+            android:gravity="center_vertical"
+            android:hint="DN"
+            android:numeric="decimal"
+            android:paddingLeft="3dp"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:visibility="gone"/>
+
+
+        <EditText
+            android:id="@+id/etv_acc_no"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="3dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/background_edit_text"
+            android:gravity="center_vertical"
+            android:hint="Account"
+            android:numeric="decimal"
+            android:paddingLeft="3dp"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+
+
+
+        <Button
+            android:id="@+id/btn_date"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_edit_text"
+            android:gravity="center_vertical"
+            android:hint="Date"
+            android:paddingLeft="3dp"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_date_end"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1.2"
+            android:background="@drawable/background_edit_text"
+            android:gravity="center_vertical"
+            android:text="End Date"
+            android:paddingLeft="3dp"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:visibility="gone" />
+
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/curved_button_background"
+            android:text="Clear"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/curved_button_background"
+            android:text="Search"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12dp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_color_code"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_color1"
+                android:layout_width="0dp"
+                android:layout_height="14dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Sch Pending"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_color2"
+                android:layout_width="0dp"
+                android:layout_height="14dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Outst Pending"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_color3"
+                android:layout_width="0dp"
+                android:layout_height="14dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Settled"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_normal_header"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1.4"
+                android:gravity="left"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:paddingLeft="3dp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="NIC/BR"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:paddingLeft="5dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Contact No"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.8"
+                android:gravity="left"
+                android:text="Accs"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:paddingLeft="5dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_header_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.8"
+                android:gravity="left"
+                android:text="Time"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone"
+                android:paddingLeft="3dp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Due Date"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Register"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_district_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="City"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:paddingLeft="3dp"/>
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Revenue"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:paddingLeft="3dp"
+                android:visibility="gone"/>
+            <TextView
+
+                android:id="@+id/tv_header_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Amount"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone"
+                android:paddingLeft="3dp"
+                />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_task_schedule_header"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Time"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:paddingLeft="3dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Address"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Contact No"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="O/S"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Due date"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_customer_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            >
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tv_no_search_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="No search result"
+            android:textColor="@color/clicked_red"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

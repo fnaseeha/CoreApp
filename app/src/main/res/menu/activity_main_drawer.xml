@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none"
+        >
+        <item android:id="@+id/nav_my_profile" android:icon="@drawable/user"
+            android:title="My Profile"
+            />
+
+        <item android:id="@+id/nav_branch_network" android:icon="@drawable/branch_network"
+            android:title="Branch Network" />
+
+        <item
+            android:id="@+id/nav_4g_network"
+            android:icon="@drawable/fourg_netowrk"
+            android:title="4G Coverage" />
+
+
+        <item
+            android:id="@+id/updates"
+            android:icon="@drawable/refresh"
+            android:title="Refresh"
+            android:visible="true" />
+
+        <item
+            android:id="@+id/unit_in_hand"
+            android:icon="@drawable/refresh"
+            android:title="Unit In Hand"
+            android:visible="true" />
+
+        <item android:id="@+id/summary" android:icon="@drawable/summary"
+            android:title="Daily Summary" android:visible="true" />
+
+
+        <item android:id="@+id/nav_reports" android:icon="@drawable/home"
+            android:title="Summary" android:visible="false"  />
+
+        <item android:id="@+id/nav_tracking" android:icon="@android:drawable/ic_dialog_map"
+            android:title="Today Tracking" android:visible="false"/>
+
+        <item android:id="@+id/nav_update_core" android:icon="@drawable/core_app_update"
+            android:title="Update" android:visible="true"/>
+
+        <item android:id="@+id/nav_help" android:icon="@drawable/ic_help"
+            android:title="Help" android:visible="true"/>
+f
+        <item android:id="@+id/nav_car_read" android:icon="@drawable/common_full_open_on_phone"
+            android:title="Card Read" android:visible="false"/>
+
+        <item android:id="@+id/nav_logout" android:icon="@drawable/logout_icon"
+            android:title="Logout" />
+    </group>
+</menu>

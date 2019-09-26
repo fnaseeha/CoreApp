@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_marginTop="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/colorAccent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageButton
+                android:id="@+id/ib_main_options"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/logout_icon"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="2dp"/>
+
+            <ImageButton
+                android:id="@+id/ib_check_for_new_updates"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/refresh"
+                android:layout_marginRight="8dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="8dp"
+                android:layout_toLeftOf="@id/ib_main_options"
+
+                />
+
+
+            <ImageButton
+                android:id="@+id/ib_tracking_check"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_toLeftOf="@+id/ib_main_options"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/attendence_in"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true">
+
+
+
+                <TextView
+                    android:id="@+id/tv_new_apps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="New Apps : "
+                    android:textSize="12dp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_no_of_apps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textSize="12dp"
+                    android:textColor="@android:color/white"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_main_icon_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <include layout="@layout/search_template" />
+
+
+</LinearLayout>

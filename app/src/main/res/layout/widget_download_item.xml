@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="8dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="2dp"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@color/colorPrimaryDark"
+            >
+
+        <ImageView
+            android:id="@+id/iv_app_icon_dialog"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="Description"
+            android:background="@android:drawable/ic_menu_report_image"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="4dp"/>
+
+            <TextView
+            android:id="@+id/tv_app_name_dialog"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="60dp"
+            android:textSize="15dp"
+            android:text="App Name"
+            android:textColor="@android:color/white"
+            android:gravity="left|center"
+            android:layout_below="@+id/iv_app_icon"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:layout_margin="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+
+            />
+
+            <Button
+                android:id="@+id/btn_install_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/background_button"
+                android:layout_marginRight="4dp"
+                android:text="Install"
+                android:textColor="@android:color/white"
+                android:textSize="12dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

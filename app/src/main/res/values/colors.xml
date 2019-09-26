@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00796B</color>
+    <color name="colorPrimaryDark">#006064</color>
+    <color name="colorAccent">#EF5350</color>
+
+    <color name="background_color">@android:color/transparent</color>
+
+    <color name="background_screen1">#ffe6e5</color>
+    <color name="background_screen2">#cf8989</color>
+
+    <color name="background_editText">#646464</color>
+
+
+    <color name="button_color_0">#8bdac9</color>
+    <color name="button_color_1">#029789</color>
+    <color name="button_color_2">#027a6c</color>
+    <color name="item_background">#607D8B</color>
+
+    <color name="disablecolor">#a69b9b</color>
+
+    <color name="clicked_red">#ff847b</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="green">#9dd973</color>
+    <color name="green_dark">#87ba62</color>
+
+    <color name="disabled_color">#c2bbbb</color>
+    <color name="enabled_color">#ffffff</color>
+
+    <color name="cardViewBackground">#142126</color>
+    <color name="cardViewNotSelectBackground">#2b4854</color>
+
+
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_rounded"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_longpress_option_main_menu_Open"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="Options"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:tag="0"
+            android:background="@drawable/top_cureved_red"
+            />
+
+        <TextView
+            android:id="@+id/tv_longpress_option_main_menu_Details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="Details"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:tag="1"/>
+
+        <TextView
+            android:id="@+id/tv_longpress_option_main_menu_Uninstall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:text="Uninstall"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:tag="2"/>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_editText"
+    android:gravity="center_vertical"
+    android:layout_marginTop="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_weight="1.4"
+            android:layout_height="wrap_content"
+            android:text="N/A"
+            android:textSize="10dp"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:paddingLeft="3dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_nicbr"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="N/A"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:paddingLeft="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_contact_no"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="N/A"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_no_of_accounts"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="N/A"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:padding="3dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_payment_time"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="N/A"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:paddingLeft="3dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_due_date"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="N/A"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:visibility="gone"/>
+
+        <CheckBox
+            android:id="@+id/cb_register"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal"
+            android:textColor="@color/black"
+            android:enabled="false"
+            android:visibility="gone"
+
+           />
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="N/A"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:paddingLeft="3dp"/>
+
+        <TextView
+            android:id="@+id/tv_revenue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:text="N/A"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:paddingLeft="3dp"
+            android:visibility="gone"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/horizontal_line"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        />
+
+
+
+</RelativeLayout>

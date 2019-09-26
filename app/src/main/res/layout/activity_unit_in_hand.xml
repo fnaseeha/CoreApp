@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.lankabellapps.activities.UnitInHandActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/backgroundLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/window_title_new"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    >
+
+                    <Button
+                        android:id="@+id/btn_Lte"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:text="@string/lte_4"
+
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="15sp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginEnd="4dp" />
+
+
+                    <Button
+                        android:id="@+id/btn_Cdma"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:text="@string/cdma_5"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginStart="2dp" />
+
+                    <Button
+                        android:id="@+id/btn_sim"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_background"
+                        android:text="@string/sim_3"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:textSize="15sp"
+                        android:layout_marginStart="2dp" />
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="13">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="2dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_hand_in_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/colorAccent"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:text="@string/serialno"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:text="@string/itemcode"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                  <!--  <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:text="IssueNo"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:text="@string/issueddate"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                 <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:text="@string/status"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_units"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:visibility="gone"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/no_data"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/no_data_found"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

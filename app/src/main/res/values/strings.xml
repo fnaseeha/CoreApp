@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Lanka Bell Applications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+    <string name="lte_4">LTE (4)</string>
+    <string name="cdma_5">CDMA (5)</string>
+    <string name="serialno">SerialNo</string>
+    <string name="itemcode">ItemCode</string>
+    <string name="issueddate">IssuedDate</string>
+    <string name="status">Status</string>
+    <string name="all_6">All (6)</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="sim_3">SIM (3)</string>
+    <string name="last_phone_s_serialnumber">Last Phone\'s SerialNumber :</string>
+    <string name="check">Check</string>
+    <string name="mark">Mark</string>
+    <string name="meter_value">Meter Value</string>
+    <string name="unsynced_gps_count_5">UnSynced GPS count : 5</string>
+</resources>

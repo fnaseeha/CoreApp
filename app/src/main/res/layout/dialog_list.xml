@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel_lay_dialog_header"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorAccent">
+
+        <ImageButton
+            android:id="@+id/img_btn_ok"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+           android:layout_marginLeft="5dp"
+            android:background="@android:drawable/ic_input_add"
+            android:visibility="gone"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_dialog_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Select Item"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"/>
+
+        <ImageButton
+            android:id="@+id/img_btn_close"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rel_lay_search_container"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:visibility="gone"
+            android:background="@android:color/white"
+            >
+
+            <EditText
+                android:id="@+id/et_searchView"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="8dp"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:drawablePadding="8dp"
+                android:hint="Search"
+                android:lines="1"
+                android:paddingLeft="8dp"
+                android:scrollHorizontally="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"
+                android:background="@drawable/background_edit_text"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_single_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="No result found."
+                android:textColor="@android:color/black"
+                android:visibility="gone"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.lankabellapps.activities.MyProfileActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/window_title"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_alignParentTop="true"
+                    android:textStyle="bold"
+                    android:text="Epf"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="4dp"
+                    android:textAllCaps="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_myprofile_epf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:text="N/A"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="4dp"
+
+                    />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:visibility="gone"
+            >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignParentTop="true"
+                android:textStyle="bold"
+                android:text="Name"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:drawablePadding="4dp"
+                android:textAllCaps="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_myprofile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:text="N/A"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:gravity="center_vertical"
+                android:drawablePadding="4dp"
+
+                />
+
+        </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_alignParentTop="true"
+                android:textStyle="bold"
+                android:text="Server"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:drawablePadding="4dp"
+                android:textAllCaps="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_myprofile_serverstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:text="N/A"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:gravity="center_vertical"
+                android:drawablePadding="4dp"
+
+                />
+
+        </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_alignParentTop="true"
+                    android:textStyle="bold"
+                    android:text="Number of Merchants"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="4dp"
+                    android:textAllCaps="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_myprofile_number_of_merchants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:text="N/A"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="4dp"
+
+                    />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_alignParentTop="true"
+                    android:textStyle="bold"
+                    android:text="Number of Customers"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="4dp"
+                    android:textAllCaps="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_myprofile_number_of_customers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:text="N/A"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="4dp"
+
+                    />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_alignParentTop="true"
+                    android:textStyle="bold"
+                    android:text="Location Points"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="4dp"
+                    android:textAllCaps="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_myprofile_locationpoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:text="N/A"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="4dp"
+
+                    />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_myprofile_appdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Details"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_green_dark"
+                android:gravity="center_vertical"
+                android:drawablePadding="4dp"
+
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_myprofile_app_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

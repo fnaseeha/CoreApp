@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    android:focusable="true" android:focusableInTouchMode="true">
+
+
+    <include layout="@layout/window_title" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <!--<EditText-->
+                <!--android:id="@+id/etvmName"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="4dp"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:background="@drawable/background_edit_text"-->
+                <!--android:ems="10"-->
+                <!--android:hint="Name"-->
+                <!--android:imeOptions="actionNext"-->
+                <!--android:inputType="text"-->
+                <!--android:maxLength="50"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textColor="@color/black"-->
+                <!--/>-->
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="2dp"
+
+                    >
+
+                    <EditText
+                        android:id="@+id/etvmName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:inputType="textCapWords"
+                        android:textColor="@drawable/text_color"
+
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <!--<EditText-->
+                <!--android:id="@+id/etvmAddress"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="4dp"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:background="@drawable/background_edit_text"-->
+                <!--android:ems="10"-->
+                <!--android:hint="Address"-->
+                <!--android:imeOptions="actionNext"-->
+                <!--android:inputType="textMultiLine"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:singleLine="false"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textColor="@color/black"/>-->
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="2dp">
+
+                    <EditText
+                        android:id="@+id/etvmAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:hint="Address"
+                        android:inputType="textCapWords"
+                        android:textColor="@drawable/text_color"
+
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <!--<EditText-->
+                <!--android:id="@+id/etvmContactNo"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="4dp"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:background="@drawable/background_edit_text"-->
+                <!--android:ems="10"-->
+                <!--android:hint="Contact No"-->
+                <!--android:imeOptions="actionNext"-->
+                <!--android:inputType="phone"-->
+                <!--android:maxLength="10"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:phoneNumber="true"-->
+                <!--android:singleLine="false"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textColor="@color/black"/>-->
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="2dp"
+
+                    >
+
+                    <EditText
+                        android:id="@+id/etvmContactNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Contact No"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:textColor="@drawable/text_color"
+
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <!--<TextView-->
+                <!--android:id="@+id/tvmCity"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="4dp"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:background="@drawable/background_edit_text"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:hint="City"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textColor="@color/black"-->
+                <!--/>-->
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="2dp"
+
+                    >
+
+                    <EditText
+                        android:id="@+id/tvmCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="City"
+                        android:inputType="textFilter"
+                        android:textColor="@drawable/text_color"
+
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <!--<EditText-->
+                <!--android:id="@+id/etvmAccountNumber"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="4dp"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:background="@drawable/background_edit_text"-->
+                <!--android:hint="Account Number"-->
+                <!--android:inputType="number"-->
+                <!--android:maxLength="25"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textColor="@color/black"/>-->
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="2dp"
+
+                    >
+
+                    <EditText
+                        android:id="@+id/etvmAccountNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Account Number"
+                        android:inputType="textCapWords"
+                        android:textColor="@drawable/text_color" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <!--<TextView-->
+                <!--android:id="@+id/etvmBank"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="4dp"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:background="@drawable/background_edit_text"-->
+                <!--android:hint="Bank"-->
+                <!--android:inputType="number"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textColor="@color/black"/>-->
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="2dp"
+
+                    >
+
+                    <EditText
+                        android:id="@+id/etvmBank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Bank"
+                        android:inputType="textFilter"
+                        android:textColor="@drawable/text_color"
+
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="2dp"
+
+                    >
+
+                    <EditText
+                        android:id="@+id/etvmBankName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Acc Owner Name"
+                        android:inputType="textCapWords"
+                        android:textColor="@drawable/text_color"
+
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--<EditText-->
+                <!--android:id="@+id/etvmNic"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="4dp"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--android:background="@drawable/background_edit_text"-->
+                <!--android:hint="NIC"-->
+                <!--android:maxLength="12"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="18sp"-->
+                <!--/>-->
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="2dp"
+
+                    >
+
+                    <EditText
+                        android:id="@+id/etvmNic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="NIC"
+                        android:inputType="textCapWords"
+                        android:maxLength="12"
+                        android:textColor="@drawable/text_color" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/background_edit_text"
+                    android:hint="Get Location"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnClear"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/curved_button_background"
+                        android:text="Clear" />
+
+                    <Button
+                        android:id="@+id/btnAddMerchant"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/curved_button_background"
+                        android:text="Add" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

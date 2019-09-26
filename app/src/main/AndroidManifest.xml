@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.lankabellapps">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+
+    <!-- AIzaSyAsPcfA0-dSsR4hU0Atxogl4epF13x_380 -->
+    <application
+        android:name=".LankaBellApps"
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:icon="@mipmap/launcher_ht"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="LankaBellAppsDB.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="5" />
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.example.user.lankabellapps.models.UserProfile,
+            com.example.user.lankabellapps.models.AvailableApps,
+             com.example.user.lankabellapps.models.TimeCap,
+             com.example.user.lankabellapps.models.Attendence,
+             com.example.user.lankabellapps.models.TrackingData,
+             com.example.user.lankabellapps.models.Customers,
+             com.example.user.lankabellapps.models.Account,
+             com.example.user.lankabellapps.models.LocationRegisterWithCustomer,
+             com.example.user.lankabellapps.models.Merchants,
+             com.example.user.lankabellapps.models.MerchantsCities,
+             com.example.user.lankabellapps.models.TSRDetails,
+             com.example.user.lankabellapps.models.BankList,
+             com.example.user.lankabellapps.models.TSRDetails,
+             com.example.user.lankabellapps.models.CusVisit,
+             com.example.user.lankabellapps.models.UnitHand" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDSlOxksA8KNZDYPdL1cJ4liTD4TAe2wV0" />
+
+        <!-- AIzaSyDXyklJHG18vZoc6TmknfR7SMrYiVA6BNw        home -->
+
+
+        <!-- AIzaSyDSlOxksA8KNZDYPdL1cJ4liTD4TAe2wV0     office -->
+
+
+        <!-- android:value="AIzaSyAhLnKO4POePn2bvbhq_ftqb0nFfvC6SdY" /> QA -->
+
+
+        <!-- AIzaSyCTpplRzxlZ2AB-UqAWnb8OPNY-ggPv7dA   testmapp -->
+
+
+        <!-- android:value="AIzaSyBovRf-W_MiA9Srq88tiUUZ7BFpgeA1Oxs"    Dev -->
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activities.AttendenceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".activities.SplashScreen"
+            android:theme="@style/AppTheme.Fullscreen.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- <service -->
+        <!-- android:name=".services.backgroundservices.TrackingService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true" -->
+        <!-- android:label="Collector Tracking Service" -->
+        <!-- android:process=":remote"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.BOOT_COMPLETED" /> -->
+        <!-- <action android:name="com.android.trackingstart" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+
+        <service
+            android:name=".services.backgroundservices.SampleTrackingService"
+            android:label="Core Tracking Service">
+            <intent-filter>
+                <action android:name="android.intent.action.TRACKER" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".services.backgroundservices.TrackBroadCast">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.cureapp.CUSTOM_INTENT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".services.backgroundservices.LocationLoggerServiceManager"
+            android:enabled="true"
+            android:exported="false"
+            android:label="LocationLoggerServiceManager">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- <receiver android:name=".services.backgroundservices.SaveTrackings"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.TRACK" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <receiver
+            android:name=".services.backgroundservices.ConnectivityReciver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activities.ViewCustomerActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.ShowCurrentLocationActivity" />
+        <activity
+            android:name=".activities.LocationShowActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- <provider -->
+        <!-- android:name="com.activeandroid.content.ContentProvider" -->
+        <!-- android:authorities="com.sales.lankabellapps.user.tsrsalesapp" -->
+        <!-- android:exported="true" /> -->
+
+        <provider
+            android:name="com.activeandroid.content.ContentProvider"
+            android:authorities="com.example.user.lankabellapps"
+            android:exported="true" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.user.lankabellapps.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/external_files" />
+        </provider>
+
+        <activity
+            android:name=".activities.AddMerchantsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MyProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.MapLocationActivity" />
+        <activity android:name=".activities.UnitInHandActivity"></activity>
+    </application>
+
+</manifest>
