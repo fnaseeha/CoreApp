@@ -27,6 +27,12 @@
             android:title="Unit In Hand"
             android:visible="true" />
 
+        <item
+            android:id="@+id/leave"
+            android:icon="@drawable/default_icon"
+            android:title="Leave"
+            android:visible="true" />
+
         <item android:id="@+id/summary" android:icon="@drawable/summary"
             android:title="Daily Summary" android:visible="true" />
 
@@ -42,7 +48,7 @@
 
         <item android:id="@+id/nav_help" android:icon="@drawable/ic_help"
             android:title="Help" android:visible="true"/>
-f
+
         <item android:id="@+id/nav_car_read" android:icon="@drawable/common_full_open_on_phone"
             android:title="Card Read" android:visible="false"/>
 

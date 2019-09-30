@@ -93,7 +93,9 @@ public class  AttendenceActivity extends AppCompatActivity implements Attendenct
 
     @Bind(R.id.ll_text_view)
     LinearLayout mEditTextLayout;
-
+/* mEditTextLayout.setVisibility(View.GONE);
+            mSupportLayout.setVisibility(View.VISIBLE);
+            mAttendenceTogle.setVisibility(View.GONE);*/
     @Bind(R.id.LeaveRemark)
     EditText leaveremark;
 
@@ -277,10 +279,9 @@ public class  AttendenceActivity extends AppCompatActivity implements Attendenct
         // RA get app names from the table
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, arraySpinner);
+                android.R.layout.simple_spinner_dropdown_item, arraySpinner);
         mRall.setAdapter(adapter);
         mRall.setPrompt("Select a Rall");
-
         mBack.setImageResource(R.drawable.back);
 
         mRall.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -307,7 +308,7 @@ public class  AttendenceActivity extends AppCompatActivity implements Attendenct
         // RA get app names from the table
 
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, arraySpinner2);
+                android.R.layout.simple_spinner_dropdown_item, arraySpinner2);
         mRall2.setAdapter(adapter2);
         mRall2.setPrompt("Select a Rall");
 
@@ -338,7 +339,7 @@ public class  AttendenceActivity extends AppCompatActivity implements Attendenct
         // RA get app names from the table
 
         ArrayAdapter<String> adapter3 = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, arraySpinner3);
+                android.R.layout.simple_spinner_dropdown_item, arraySpinner3);
         mRall3.setAdapter(adapter3);
         mRall3.setPrompt("Select a Rall");
 

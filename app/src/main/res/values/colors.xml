@@ -11,6 +11,9 @@
 
     <color name="background_editText">#646464</color>
 
+    <color name="text_color_1">#000000</color>
+    <color name="text_color_2">#ffffff</color>
+    <color name="text_color_3">#7e1d1a</color>
 
     <color name="button_color_0">#8bdac9</color>
     <color name="button_color_1">#029789</color>
@@ -20,6 +23,7 @@
     <color name="disablecolor">#a69b9b</color>
 
     <color name="clicked_red">#ff847b</color>
+    <color name="red">#FF0000</color>
 
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
@@ -32,6 +36,9 @@
 
     <color name="cardViewBackground">#142126</color>
     <color name="cardViewNotSelectBackground">#2b4854</color>
+
+    <color name="leave_back">#141111</color>
+    <color name="leave_back2">#3E5544</color>
 
 
 </resources>

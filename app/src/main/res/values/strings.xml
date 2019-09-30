@@ -19,4 +19,10 @@
     <string name="mark">Mark</string>
     <string name="meter_value">Meter Value</string>
     <string name="unsynced_gps_count_5">UnSynced GPS count : 5</string>
+    <string name="to_date_time"><![CDATA[To Date & Time]]></string>
+    <string name="from_date_time"><![CDATA[From Date & Time]]></string>
+    <string name="title_activity_leave">LeaveActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_fragment">FragmentActivity</string>
 </resources>

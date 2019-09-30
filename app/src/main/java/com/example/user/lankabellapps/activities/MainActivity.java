@@ -295,6 +295,14 @@ public class MainActivity extends AppCompatActivity implements CheckMyAttendnece
                         overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
 
                         break;
+
+                        case R.id.leave:
+
+                        Intent intent_l = new Intent(MainActivity.this, FragmentActivity.class);
+                        startActivity(intent_l);
+                        overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
+
+                        break;
                     case R.id.unit_in_hand:
 
                     Intent intent_unit = new Intent(MainActivity.this, UnitInHandActivity.class);

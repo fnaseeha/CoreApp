@@ -55,6 +55,7 @@ import butterknife.OnClick;
 import org.joda.time.DateTime;
 import org.joda.time.Minutes;
 
+import static android.content.Context.INPUT_METHOD_SERVICE;
 import static com.example.user.lankabellapps.helper.Constants.GPS_INTERVAL;
 
 public class LoginActivity extends AppCompatActivity implements LoginSync.LoginSyncEvetns,
@@ -224,11 +225,15 @@ public class LoginActivity extends AppCompatActivity implements LoginSync.LoginS
 
                     try {
                         AllSerialNumbers = Utils.getSerialNumbers(this);
-                        System.out.println("* sm 1st " + AllSerialNumbers.get(0));
+//                        System.out.println("* sm 1st " + AllSerialNumbers.get(0));
 
-                        if (AllSerialNumbers.get(0) == null) {
+                        if (AllSerialNumbers == null) {
                             dialog.dismiss();
                             coloredSnackbar.showSnackBar("Please Try again No Sim Card detected", coloredSnackbar.TYPE_ERROR, 2500);
+
+                        } else if (AllSerialNumbers.size() == 0) {
+                            dialog.dismiss();
+                            coloredSnackbar.showSnackBar("Sim Card is not detected", coloredSnackbar.TYPE_ERROR, 2500);
 
                         } else {
 

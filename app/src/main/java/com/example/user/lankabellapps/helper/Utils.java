@@ -48,81 +48,71 @@ public class Utils implements ActivityCompat.OnRequestPermissionsResultCallback 
         SubscriptionManager manager = null;
         ArrayList<String> SerialNumbers = new ArrayList<>();
 
+//        mTelephonyMgr = (TelephonyManager) context
+//                .getSystemService(Context.TELEPHONY_SERVICE);
+//
+//        int permissionCheck = ContextCompat.checkSelfPermission(context, Manifest.permission.READ_PHONE_STATE);
+//
+//
+//        if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP_MR1) {
+//
+//            try {
+//
+//                if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+//                    ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_PHONE_STATE}, 0);
+//                }
+//                manager = (SubscriptionManager) context.getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE);
+//                //assert manager != null;
+//                if (manager != null) {
+//                    System.out.println("* manager not null");
+//                    List<SubscriptionInfo> infoList = manager.getActiveSubscriptionInfoList();
+//             //       System.out.println("* info list " + infoList.size());
+//                if(infoList != null) {
+//                    for (int i = 0; i < infoList.size(); i++) {
+//
+//                        SubscriptionInfo info = infoList.get(i);
+//                        String serialNumber = info.getIccId();
+//                        SerialNumbers.add(serialNumber);
+//
+//                    }
+//                }else{
+//                    System.out.println("* infoList is null");
+//                }
+//
+//                } else {
+//                    System.out.println("* manager is null");
+//                }
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        } else {
+//
+//
+//            getSimSerialNumber = mTelephonyMgr.getSimSerialNumber();
+//            SerialNumbers.add(getSimSerialNumber);
+////
+////			SerialNumbers.clear();
+////		//	SerialNumbers.add("8994034060115581639f");
+////			SerialNumbers.add("8994084111800545576"); //4107
+//
+//            // SerialNumbers.add("8994029702649458050"); //131796
+//
+//            //   SerialNumbers.add("8994036031116012502"); //129141 LIVE USER
+//
+//
+////                         "8994035110313941827F"); //115 live
+////                         "8994029702958154753f"); //9127426
+////                          "8994084111800545576f"); //1039 Test
+////                          "8994036031116012658F"); //1039
+////                          "8994084111800545576");
+////                          "8994035110313941819f");//246
+////                          "8994084111800545576"); //319
+////                        "8994084111800545576");//test use 131796
+//        }
+//
+        SerialNumbers.clear();
 
-/*
-        mTelephonyMgr = (TelephonyManager) context
-                .getSystemService(Context.TELEPHONY_SERVICE);
-//android.permission.READ_PHONE_STATE
-        *//*int permissionCheck = ContextCompat.checkSelfPermission(context, Manifest.permission.READ_PHONE_STATE);
-        if (Build.VERSION.SDK_INT >= 23) {
-            if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_PHONE_STATE}, 0);
-            }*//*
-        int permissionCheck = ContextCompat.checkSelfPermission(context, Manifest.permission.READ_PHONE_STATE);
-
-
-
-        if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP_MR1) {
-
-            try {
-
-                if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_PHONE_STATE}, 0);
-                }
-                manager = (SubscriptionManager) context.getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE);
-                //assert manager != null;
-                if (manager != null) {
-                    System.out.println("* manager not null");
-                    List<SubscriptionInfo> infoList = manager.getActiveSubscriptionInfoList();
-                    System.out.println("* info list "+infoList.size());
-
-                    for (int i = 0; i < infoList.size(); i++) {
-
-                        SubscriptionInfo info = infoList.get(i);
-                        // int simSlotIndex = info.getSimSlotIndex();
-                        String serialNumber = info.getIccId();
-                        SerialNumbers.add(serialNumber);
-                        System.out.println("* serial number : " + serialNumber);
-
-                    }
-               *//* if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_PHONE_STATE}, 0);
-                } else {
-                    //TODO
-                    getSimSerialNumber = mTelephonyMgr.getSimSerialNumber();
-                    RunDemo(context);
-                }*//*
-                }else{
-                    System.out.println("* manager is null");
-                 //   getSimSerialNumber = mTelephonyMgr.getSimSerialNumber();
-                  //  SerialNumbers.add(getSimSerialNumber);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-//                getSimSerialNumber = mTelephonyMgr.getSimSerialNumber();
-//                SerialNumbers.add(getSimSerialNumber);
-            }
-        } else {
-
-
-            getSimSerialNumber = mTelephonyMgr.getSimSerialNumber();
-            SerialNumbers.add(getSimSerialNumber);
-           // SerialNumbers.add("8994029702649458050"); //131796
-
-         //   SerialNumbers.add("8994036031116012502"); //129141 LIVE USER
-
-            *//*
-                         "8994035110313941827F"); //115 live
-                         "8994029702958154753f"); //9127426
-                          "8994084111800545576f"); //1039 Test
-                          "8994036031116012658F"); //1039
-                          "8994084111800545576");
-                          "8994035110313941819f");//246
-                          "8994084111800545576"); //319
-                          "8994029702857736510F"); //2453
-                        "8994084111800545576");//test use 131796*//*
-        }*/
-        SerialNumbers.add("8994029702857736510F");
+        	SerialNumbers.add("89940102166881325622");
         return SerialNumbers;
     }
 

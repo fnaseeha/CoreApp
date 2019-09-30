@@ -32,17 +32,24 @@
     <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
     <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
-    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
-    <!-- AIzaSyAsPcfA0-dSsR4hU0Atxogl4epF13x_380 -->
     <application
         android:name=".LankaBellApps"
         android:allowBackup="true"
-        android:usesCleartextTraffic="true"
         android:icon="@mipmap/launcher_ht"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activities.FragmentActivity"
+            android:label="@string/title_activity_fragment"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".activities.LeaveActivity" />
+        <activity android:name=".ReportingToApproval" />
+        <activity android:name=".SubstituteApproval" />
+
         <meta-data
             android:name="AA_DB_NAME"
             android:value="LankaBellAppsDB.db" />
@@ -51,39 +58,14 @@
             android:value="5" />
         <meta-data
             android:name="AA_MODELS"
-            android:value="com.example.user.lankabellapps.models.UserProfile,
-            com.example.user.lankabellapps.models.AvailableApps,
-             com.example.user.lankabellapps.models.TimeCap,
-             com.example.user.lankabellapps.models.Attendence,
-             com.example.user.lankabellapps.models.TrackingData,
-             com.example.user.lankabellapps.models.Customers,
-             com.example.user.lankabellapps.models.Account,
-             com.example.user.lankabellapps.models.LocationRegisterWithCustomer,
-             com.example.user.lankabellapps.models.Merchants,
-             com.example.user.lankabellapps.models.MerchantsCities,
-             com.example.user.lankabellapps.models.TSRDetails,
-             com.example.user.lankabellapps.models.BankList,
-             com.example.user.lankabellapps.models.TSRDetails,
-             com.example.user.lankabellapps.models.CusVisit,
-             com.example.user.lankabellapps.models.UnitHand" />
+            android:value="com.example.user.lankabellapps.models.UserProfile,             com.example.user.lankabellapps.models.AvailableApps,              com.example.user.lankabellapps.models.TimeCap,              com.example.user.lankabellapps.models.Attendence,              com.example.user.lankabellapps.models.TrackingData,              com.example.user.lankabellapps.models.Customers,              com.example.user.lankabellapps.models.Account,              com.example.user.lankabellapps.models.LocationRegisterWithCustomer,              com.example.user.lankabellapps.models.Merchants,              com.example.user.lankabellapps.models.MerchantsCities,              com.example.user.lankabellapps.models.TSRDetails,              com.example.user.lankabellapps.models.BankList,              com.example.user.lankabellapps.models.TSRDetails,              com.example.user.lankabellapps.models.CusVisit,              com.example.user.lankabellapps.models.UnitHand" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyDSlOxksA8KNZDYPdL1cJ4liTD4TAe2wV0" />
-
-        <!-- AIzaSyDXyklJHG18vZoc6TmknfR7SMrYiVA6BNw        home -->
-
-
+            android:value="AIzaSyDSlOxksA8KNZDYPdL1cJ4liTD4TAe2wV0" /> <!-- AIzaSyDXyklJHG18vZoc6TmknfR7SMrYiVA6BNw        home -->
         <!-- AIzaSyDSlOxksA8KNZDYPdL1cJ4liTD4TAe2wV0     office -->
-
-
         <!-- android:value="AIzaSyAhLnKO4POePn2bvbhq_ftqb0nFfvC6SdY" /> QA -->
-
-
         <!-- AIzaSyCTpplRzxlZ2AB-UqAWnb8OPNY-ggPv7dA   testmapp -->
-
-
         <!-- android:value="AIzaSyBovRf-W_MiA9Srq88tiUUZ7BFpgeA1Oxs"    Dev -->
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -92,18 +74,15 @@
             android:name=".activities.MainActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".activities.LoginActivity"
             android:exported="true"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".activities.AttendenceActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustResize" />
-
         <activity
             android:name=".activities.SplashScreen"
             android:theme="@style/AppTheme.Fullscreen.Splash">
@@ -112,9 +91,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- <service -->
+        </activity> <!-- <service -->
         <!-- android:name=".services.backgroundservices.TrackingService" -->
         <!-- android:enabled="true" -->
         <!-- android:exported="true" -->
@@ -125,7 +102,6 @@
         <!-- <action android:name="com.android.trackingstart" /> -->
         <!-- </intent-filter> -->
         <!-- </service> -->
-
         <service
             android:name=".services.backgroundservices.SampleTrackingService"
             android:label="Core Tracking Service">
@@ -141,7 +117,6 @@
                 <action android:name="com.cureapp.CUSTOM_INTENT" />
             </intent-filter>
         </receiver>
-
         <receiver
             android:name=".services.backgroundservices.LocationLoggerServiceManager"
             android:enabled="true"
@@ -150,8 +125,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
-        </receiver>
-        <!-- <receiver android:name=".services.backgroundservices.SaveTrackings"> -->
+        </receiver> <!-- <receiver android:name=".services.backgroundservices.SaveTrackings"> -->
         <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.TRACK" /> -->
         <!-- </intent-filter> -->
@@ -171,13 +145,10 @@
         <activity
             android:name=".activities.LocationShowActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" />
-
-        <!-- <provider -->
+            android:windowSoftInputMode="adjustPan" /> <!-- <provider -->
         <!-- android:name="com.activeandroid.content.ContentProvider" -->
         <!-- android:authorities="com.sales.lankabellapps.user.tsrsalesapp" -->
         <!-- android:exported="true" /> -->
-
         <provider
             android:name="com.activeandroid.content.ContentProvider"
             android:authorities="com.example.user.lankabellapps"
@@ -202,7 +173,7 @@
             android:name=".activities.WebViewActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".activities.MapLocationActivity" />
-        <activity android:name=".activities.UnitInHandActivity"></activity>
+        <activity android:name=".activities.UnitInHandActivity" />
     </application>
 
 </manifest>
