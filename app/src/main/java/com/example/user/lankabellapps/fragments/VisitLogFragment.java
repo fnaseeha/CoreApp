@@ -115,7 +115,6 @@ public class VisitLogFragment extends Fragment implements VisitLogAdapter.Single
 
     public void CallToDateDialog(final int CallFrom, View view) {
 
-
         DateTimeSelectView dateTimeSelectView = new DateTimeSelectView(getActivity(), getActivity().getFragmentManager(), new DateTimeSelectView.DateTimeSelectListener() {
             @Override
             public void onSet(String Mdate, String Mmonth, String Myear, String Mhours, String Mminuts, String monthName, int CallFrom) {

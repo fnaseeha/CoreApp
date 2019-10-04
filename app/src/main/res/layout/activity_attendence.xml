@@ -14,7 +14,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true">
 
         <ScrollView
 
@@ -76,10 +77,7 @@
                     android:layout_height="232dp"
                     android:layout_gravity="center"
                     android:orientation="vertical"
-                    android:visibility="gone"
-
-
-                    >
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/txtleavetype"
@@ -174,21 +172,6 @@
                             android:layout_marginBottom="5dp"
                             android:gravity="center_vertical">
 
-
-                            <!--<EditText-->
-                            <!--android:id="@+id/tv_attendence_team_code"-->
-                            <!--android:layout_width="0dp"-->
-                            <!--android:layout_height="40dp"-->
-                            <!--android:layout_marginLeft="10dp"-->
-                            <!--android:layout_marginRight="10dp"-->
-                            <!--android:layout_weight="2.5"-->
-                            <!--android:background="@drawable/background_edit_text"-->
-                            <!--android:gravity="center"-->
-                            <!--android:hint="Team Code"-->
-                            <!--android:paddingLeft="3dp"-->
-                            <!--android:singleLine="true"-->
-                            <!--android:textColor="@android:color/white" />-->
-
                             <android.support.design.widget.TextInputLayout
                                 android:id="@+id/TeamCodeLayout"
                                 android:layout_width="match_parent"
@@ -196,9 +179,7 @@
                                 android:layout_marginBottom="2dp"
                                 android:layout_marginLeft="5dp"
                                 android:layout_marginRight="5dp"
-                                android:layout_marginTop="2dp"
-
-                                >
+                                android:layout_marginTop="2dp">
 
                                 <EditText
                                     android:id="@+id/tv_attendence_team_code"
@@ -209,7 +190,6 @@
                                     android:maxLength="6"
                                     android:singleLine="true"
                                     android:textColor="@drawable/text_color"
-
                                     android:autofillHints="" />
                             </android.support.design.widget.TextInputLayout>
 
@@ -223,21 +203,6 @@
                             android:layout_marginBottom="5dp"
                             android:gravity="center_vertical">
 
-
-                            <!--<EditText-->
-                            <!--android:id="@+id/tv_attendence_bike_number"-->
-                            <!--android:layout_width="0dp"-->
-                            <!--android:layout_height="40dp"-->
-                            <!--android:layout_marginLeft="10dp"-->
-                            <!--android:layout_marginRight="10dp"-->
-                            <!--android:layout_weight="2.5"-->
-                            <!--android:background="@drawable/background_edit_text"-->
-                            <!--android:gravity="center"-->
-                            <!--android:hint="Bike Number"-->
-                            <!--android:paddingLeft="3dp"-->
-                            <!--android:singleLine="true"-->
-                            <!--android:textColor="@android:color/white" />-->
-
                             <android.support.design.widget.TextInputLayout
                                 android:id="@+id/BikeCodeLayout"
                                 android:layout_width="match_parent"
@@ -245,9 +210,7 @@
                                 android:layout_marginBottom="2dp"
                                 android:layout_marginLeft="5dp"
                                 android:layout_marginRight="5dp"
-                                android:layout_marginTop="2dp"
-
-                                >
+                                android:layout_marginTop="2dp">
 
                                 <EditText
                                     android:id="@+id/tv_attendence_bike_number"
@@ -357,9 +320,7 @@
                         android:layout_marginBottom="10dp"
                         android:layout_marginTop="20dp"
                         android:textColor="@android:color/white"
-                        android:textSize="14sp"
-
-                        />
+                        android:textSize="14sp"/>
 
                 </LinearLayout>
 
@@ -384,12 +345,6 @@
                     android:layout_marginTop="1dp"
                     android:textColor="@android:color/holo_blue_dark"
                     android:textSize="15sp"/>
-
-
-
-
-
-
 
             </LinearLayout>
 

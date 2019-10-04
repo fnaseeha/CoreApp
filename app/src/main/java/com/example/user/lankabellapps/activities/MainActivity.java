@@ -43,6 +43,7 @@ import android.widget.Toast;
 
 
 import com.example.user.lankabellapps.R;
+import com.example.user.lankabellapps.fragments.LeaveMainFragment;
 import com.example.user.lankabellapps.fragments.CustomerMainFragment;
 import com.example.user.lankabellapps.fragments.HomeFragment;
 import com.example.user.lankabellapps.fragments.MerchantsListFragment;
@@ -298,7 +299,7 @@ public class MainActivity extends AppCompatActivity implements CheckMyAttendnece
 
                         case R.id.leave:
 
-                        Intent intent_l = new Intent(MainActivity.this, FragmentActivity.class);
+                        Intent intent_l = new Intent(MainActivity.this, LeaveMainFragment.class);
                         startActivity(intent_l);
                         overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
 

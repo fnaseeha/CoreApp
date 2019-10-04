@@ -139,57 +139,6 @@ import java.util.Locale;
             mPosition = position;
         }
 
-//        public View getDateTimeView(ObjectInfo info, boolean isEnableTime, int position) {
-//            mPosition = position;
-//            String defValue = "Select";
-//
-//            mIsEnableTime = isEnableTime;
-//            mFieldId = info.getFieldID();
-//            boolean isEditable = 1 == info.getEditable() ? true : false;
-//            if (info.getDefaultData().getDisplayText() != null) {
-//                if (info.getDefaultData().getDisplayText().length() > 0 || info.getDefaultData().getValue().length() > 0) {
-//                    defValue = false == info.getDefaultData().getDisplayText().isEmpty() ? info.getDefaultData().getDisplayText() : getDateTimeFormat(info.getDefaultData().getValue());
-//                    defValue = true == defValue.isEmpty() ? "Select" : defValue;
-//                }
-//            }
-//
-//            LayoutInflater layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//
-//            View view = layoutInflater.inflate(R.layout.view_date_select, null);
-//            mTvDateTitle = (CustomTextView) view.findViewById(R.id.tv_date_select_title);
-//            mBtnSelectDate = (CustomButton) view.findViewById(R.id.btn_date_select);
-//
-//
-//            mTvDateTitle.setText(info.getFieldName());
-//
-//        /*try {
-//            if(!defValue.equals("Select")) {
-//                DateFormat inputFormatter = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
-//                Date date = inputFormatter.parse(defValue);
-//
-//                DateFormat outputFormatter = new SimpleDateFormat("dd/MM/yyyy");
-//                defValue = outputFormatter.format(date);
-//            }
-//        } catch (Exception e) {
-//        }*/
-//
-//            if (!mIsEnableTime) {
-//                defValue = defValue.split(" ")[0];
-//            }
-//
-//            mBtnSelectDate.setText(defValue);
-//            mBtnSelectDate.setTag(mPosition);
-//            mBtnSelectDate.setEnabled(isEditable);
-//            if (!isEditable) {
-//                mBtnSelectDate.setBackgroundResource(R.drawable.button_rounded_disable_info);
-//            }
-//
-//            mBtnSelectDate.setOnClickListener(this);
-//
-//            return view;
-//
-//        }
-
         public boolean isFillData() {
             return isFillData;
         }
@@ -201,8 +150,6 @@ import java.util.Locale;
         @Override
         public void onClick(View v) {
 
-
-
             Calendar now = Calendar.getInstance();
 
             com.wdullaer.materialdatetimepicker.date.DatePickerDialog datePickerDialog = com.wdullaer.materialdatetimepicker.date.DatePickerDialog.newInstance(
@@ -211,7 +158,6 @@ import java.util.Locale;
                     now.get(Calendar.MONTH),
                     now.get(Calendar.DAY_OF_MONTH)
             );
-
             datePickerDialog.show(mFragmentManager, "DatePickerDialog");
 
         }

@@ -8,9 +8,8 @@
     <RelativeLayout
         android:id="@+id/view_foreground"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
-        android:background="@drawable/back_white_box"
+        android:background="@drawable/main_icon_background"
         android:padding="10dp">
 
         <TextView
@@ -22,7 +21,7 @@
             android:layout_marginStart="30dp"
             android:text="EMP nO 2243"
             android:textAllCaps="true"
-            android:textColor="@color/black"
+            android:textColor="@color/button_color_1"
             android:textSize="16dp"
             android:textStyle="bold"
             android:layout_alignParentLeft="true"
@@ -35,7 +34,7 @@
             android:layout_below="@+id/ItemCode"
             android:layout_alignStart="@+id/ItemCode"
             android:text="Naseeha"
-            android:textColor="@color/black"
+            android:textColor="@color/button_color_0"
             android:textAllCaps="true"
             android:textSize="18sp"
             android:layout_alignLeft="@+id/ItemCode" />
@@ -49,7 +48,7 @@
             android:fontFamily="sans-serif"
             android:foregroundGravity="center"
             android:gravity="center"
-            android:textColor="@color/black"
+            android:textColor="@color/green"
             android:padding="10dp"
             android:text="9/17/2018 2:12:06 PM"
             android:textSize="14sp" />
@@ -65,7 +64,7 @@
             android:text="More... "
             android:textSize="18sp"
             android:visibility="visible"
-            android:textColor="#000000"
+            android:textColor="@color/white"
             android:textStyle="bold"
             tools:ignore="RtlCompat" />
         <TextView
@@ -77,7 +76,7 @@
             android:gravity="center_vertical"
             android:text="051"
             android:textAllCaps="true"
-            android:textColor="@color/black"
+            android:textColor="@color/mdtp_line_dark"
             android:textSize="15sp"
             android:textStyle="bold"
             android:layout_alignParentLeft="true" />

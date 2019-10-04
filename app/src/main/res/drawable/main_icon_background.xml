@@ -3,5 +3,11 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:state_pressed="true" android:drawable="@drawable/text_view_background_click"/>
 
-    <item android:drawable="@drawable/text_view_background_not_click"/>
+    <item android:drawable="@drawable/text_view_background_not_click">
+        <stroke android:width="2dp"
+            android:color="@color/text_color_1"/>
+
+    </item>
+
+
 </selector>
