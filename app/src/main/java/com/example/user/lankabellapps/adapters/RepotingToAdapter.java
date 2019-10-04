@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.user.lankabellapps.R;
 import com.example.user.lankabellapps.models.Reporting;
@@ -44,8 +45,13 @@ public class RepotingToAdapter extends RecyclerView.Adapter<RepotingToAdapter.My
 
     public class MyViewHoler extends RecyclerView.ViewHolder {
 
+        TextView empNo,name,date,more;
         public MyViewHoler(@NonNull View itemView) {
             super(itemView);
+            empNo = (itemView).findViewById(R.id.EmpNo);
+            empNo = (itemView).findViewById(R.id.EmpNo);
+            empNo = (itemView).findViewById(R.id.EmpNo);
+            empNo = (itemView).findViewById(R.id.EmpNo);
 
         }
     }

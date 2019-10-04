@@ -13,7 +13,7 @@
         android:padding="10dp">
 
         <TextView
-            android:id="@+id/ItemCode"
+            android:id="@+id/EmpNo"
             android:layout_width="226dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -28,19 +28,19 @@
             android:layout_marginLeft="30dp" />
 
         <TextView
-            android:id="@+id/tvDesc"
+            android:id="@+id/tvName"
             android:layout_width="204dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ItemCode"
-            android:layout_alignStart="@+id/ItemCode"
+            android:layout_below="@+id/EmpNo"
+            android:layout_alignStart="@+id/EmpNo"
             android:text="Naseeha"
             android:textColor="@color/button_color_0"
             android:textAllCaps="true"
             android:textSize="18sp"
-            android:layout_alignLeft="@+id/ItemCode" />
+            android:layout_alignLeft="@+id/EmpNo" />
 
         <TextView
-            android:id="@+id/tvType"
+            android:id="@+id/tvDate"
             android:layout_width="165dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -59,8 +59,8 @@
             android:layout_height="40dp"
             android:gravity="center"
             android:textAlignment="textEnd"
-            android:layout_below="@+id/tvDesc"
-            android:layout_alignEnd="@+id/tvType"
+            android:layout_below="@+id/tvName"
+            android:layout_alignEnd="@+id/tvDate"
             android:text="More... "
             android:textSize="18sp"
             android:visibility="visible"
