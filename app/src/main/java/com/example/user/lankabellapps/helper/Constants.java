@@ -21,7 +21,7 @@ public class Constants {
 
     //###############Test###############
  public static final String BaseUrlTOCoreApp = "119.235.1.59:4010/"; //Test
-//  public static final String BaseUrlTOCoreApp = "119.235.1.88:8091/";// Live
+ // public static final String BaseUrlTOCoreApp = "119.235.1.88:8091/";// Live
 
  // public static final String BaseUrlTOCoreApp = "10.1.3.105:8091/";// Local
    //// public static final String BaseUrlTOCoreApp = "119.235.1.59:4010/"; //8070 Given to TrackingApp

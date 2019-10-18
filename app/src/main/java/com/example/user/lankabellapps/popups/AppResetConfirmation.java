@@ -17,6 +17,7 @@ import com.example.user.lankabellapps.activities.MainActivity;
 import com.example.user.lankabellapps.R;
 import com.example.user.lankabellapps.activities.ViewCustomerActivity;
 import com.example.user.lankabellapps.fragments.HomeFragment;
+import com.example.user.lankabellapps.fragments.LeaveFragment;
 import com.example.user.lankabellapps.helper.ColoredSnackbar;
 import com.example.user.lankabellapps.helper.Constants;
 import com.example.user.lankabellapps.helper.DisplayPixelCalculator;
@@ -233,7 +234,7 @@ public class AppResetConfirmation {
                     public void onClick(View v) {
 
                         dialog.dismiss();
-                      //  ((AttendenceActivity) context).DialogConfermation(4);
+                        //  ((AttendenceActivity) context).DialogConfermation(4);
 
 //                        ((HomeFragment) Context).onResume();
 
@@ -261,9 +262,6 @@ public class AppResetConfirmation {
                 });
 
                 break;
-
-
-
 
         }
 
@@ -304,7 +302,6 @@ public class AppResetConfirmation {
         } catch (Exception e) {
             System.out.println(e);
         }
-
 
 
     }

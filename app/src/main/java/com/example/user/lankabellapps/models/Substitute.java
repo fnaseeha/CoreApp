@@ -1,19 +1,21 @@
 package com.example.user.lankabellapps.models;
 
-public class Sustitute {
+public class Substitute {
 
     private String empNo;
     private String Name;
-    private String date;
+    private String Leavedate;
+    private String AppliedDate;
     private String NoOfDay;
     private String type;
 
-    public Sustitute(String empNo, String name, String date, String noOfDay,  String type) {
+    public Substitute(String empNo, String name, String Leavedate, String AppliedDate, String noOfDay, String type) {
         this.empNo = empNo;
         Name = name;
-        this.date = date;
+        this.Leavedate = Leavedate;
         NoOfDay = noOfDay;
         this.type = type;
+        this.AppliedDate = AppliedDate;
     }
 
     public String getEmpNo() {
@@ -32,12 +34,12 @@ public class Sustitute {
         Name = name;
     }
 
-    public String getDate() {
-        return date;
+    public String getLeavedate() {
+        return Leavedate;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setLeavedate(String leavedate) {
+        this.Leavedate = leavedate;
     }
 
     public String getNoOfDay() {
@@ -56,4 +58,11 @@ public class Sustitute {
         this.type = type;
     }
 
+    public String getAppliedDate() {
+        return AppliedDate;
+    }
+
+    public void setAppliedDate(String appliedDate) {
+        AppliedDate = appliedDate;
+    }
 }

@@ -105,7 +105,7 @@ public class CustomerSearchAdapter extends RecyclerView.Adapter<CustomerSearchAd
 
     }
 //        holder.name.setText(item.get(position).getMname());
-//        holder.date.setText(item.get(position).getDate());
+//        holder.date.setText(item.get(position).getLeavedate());
 //        holder.count.setText(item.get(position).getCount())
 
 //        facilities = new Facilities();

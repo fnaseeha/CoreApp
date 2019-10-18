@@ -423,7 +423,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
-                                android:text="Bill run date"
+                                android:text="Bill run leavedate"
                                 android:textColor="@color/white"
                                 android:textSize="12dp" />
 
@@ -568,7 +568,7 @@
                         <!--android:layout_width="0dp"-->
                         <!--android:layout_weight="1"-->
                         <!--android:layout_height="30dp"-->
-                        <!--android:text="Last payment date"-->
+                        <!--android:text="Last payment leavedate"-->
                         <!--android:textColor="@color/white"-->
                         <!--android:textSize="12sp"-->
                         <!--android:gravity="center_vertical"-->
@@ -694,7 +694,7 @@
                         <!--android:layout_width="0dp"-->
                         <!--android:layout_weight="1"-->
                         <!--android:layout_height="30dp"-->
-                        <!--android:text="Due date"-->
+                        <!--android:text="Due leavedate"-->
                         <!--android:textColor="@color/white"-->
                         <!--android:textSize="12sp"-->
                         <!--android:gravity="center_vertical"-->

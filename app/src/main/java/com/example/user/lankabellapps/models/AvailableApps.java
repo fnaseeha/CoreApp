@@ -47,6 +47,21 @@ public class AvailableApps extends Model {
     @Column(name = "updateAvailable")
     public int updateAvailable;
 
+    @Override
+    public String toString() {
+        return "AvailableApps{" +
+                "appId='" + appId + '\'' +
+                ", appName='" + appName + '\'' +
+                ", packagename='" + packagename + '\'' +
+                ", iconName='" + iconName + '\'' +
+                ", date='" + date + '\'' +
+                ", version='" + version + '\'' +
+                ", url='" + url + '\'' +
+                ", sysSync='" + sysSync + '\'' +
+                ", iconUrl='" + iconUrl + '\'' +
+                ", updateAvailable=" + updateAvailable +
+                '}';
+    }
 
     public String getAppId() {
         return appId;
@@ -151,7 +166,6 @@ public class AvailableApps extends Model {
     public void updateUpdateAvailable(String appId, int x){
 
         new Update(AvailableApps.class)
-
                 .set("updateAvailable =?", x)
                 .where("appId = ?", appId)
                 .execute();

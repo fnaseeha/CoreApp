@@ -4,78 +4,62 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="@android:color/transparent"
-    android:layout_height="170dp"
+    android:layout_height="wrap_content"
     >
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/drawable_white_round"
         >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textSize="16sp"
+            android:background="#E47D7D"
+            android:text="Update Available"
+            android:textFontWeight="20"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:id="@+id/tv_title" />
 
         <TextView
+            android:layout_below="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
+            android:layout_margin="10dp"
             android:text="Samplemessage\n delete confirmation"
-            android:layout_margin="16dp"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:id="@+id/tv_message" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:background="@color/white"
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:background="@android:color/white"
-            android:layout_gravity="center">
-
-        </RelativeLayout>
 
         <LinearLayout
+
             android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginRight="0.5dp"
-                android:layout_weight="1">
-
+            android:layout_height="wrap_content">
                 <Button
-                    android:layout_width="match_parent"
+                    android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:background="@drawable/left_curve_button"
-                    android:text="Cancel"
-                    android:textColor="@android:color/white"
-                    android:id="@+id/btn_cancel" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="0.5dp"
-                android:layout_weight="1">
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/right_curve_button"
-                    android:text="Ok"
+                    android:background="@drawable/right_curve_button_black_border"
+                    android:text="Update"
                     android:textColor="@android:color/white"
                     android:id="@+id/btn_ok" />
 
-            </LinearLayout>
         </LinearLayout>
 
     </FrameLayout>

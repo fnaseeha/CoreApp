@@ -48,4 +48,12 @@ public class Alert {
         builder.setPositiveButton("OK", null);
         builder.show();
     }
+
+    public void BuildLeaveBox(String message,int num){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("Update Version");
+        builder.setMessage(message);
+        builder.setPositiveButton("OK", null);
+        builder.show();
+    }
 }

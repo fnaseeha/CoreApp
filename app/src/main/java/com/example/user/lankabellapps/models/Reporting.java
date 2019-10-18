@@ -9,9 +9,9 @@ public class Reporting {
     private String Substitute;
     private String type;
 
-    public Reporting(String empNo, String name, String date, String noOfDay, String substitute, String type) {
+    public Reporting(String empNo, String Name, String date, String noOfDay, String substitute, String type) {
         this.empNo = empNo;
-        Name = name;
+        this.Name = Name;
         this.date = date;
         NoOfDay = noOfDay;
         Substitute = substitute;
@@ -66,6 +66,12 @@ public class Reporting {
         this.type = type;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Reporting{" +
+                "empNo='" + empNo + '\'' +
+                ", Name='" + Name + '\'' +
+                ", date='" + date + '\'' +
+                '}';
+    }
 }

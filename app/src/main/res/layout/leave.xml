@@ -13,18 +13,19 @@
 
         <RelativeLayout
             android:layout_width="fill_parent"
-            android:gravity="center"
+            android:gravity="fill"
+            android:padding="5dp"
             android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:layout_margin="10dp"
+                android:layout_margin="2dp"
+                android:padding="10dp"
                 android:background="@color/cardViewBackground"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -32,6 +33,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:textColor="@color/button_color_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -50,7 +52,6 @@
                             android:layout_height="43dp"
                             android:layout_marginEnd="10dp"
                             android:layout_marginRight="10dp"
-                            android:layout_marginBottom="10dp"
                             android:drawableRight="@android:drawable/arrow_down_float"
                             android:textAlignment="center" />
                     </LinearLayout>
@@ -61,9 +62,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:background="@drawable/main_icon_background"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -88,12 +87,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:textColor="@color/white"
                         android:layout_marginBottom="10dp"
                         android:layout_weight="0.5"
                         android:gravity="center"
+                        android:textColor="@color/button_color_1"
                         android:text="@string/from_date_time"
-                        android:textSize="20sp" />
+                        android:textSize="16sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -101,20 +100,16 @@
                         android:orientation="horizontal"
                         android:weightSum="2">
 
-
-
                         <LinearLayout
-                            android:layout_width="154dp"
-                            android:layout_height="43dp"
-                            android:layout_marginStart="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:background="@drawable/spinner_background"
-                            android:layout_marginLeft="10dp">
+                            android:background="@drawable/spinner_background">
 
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:tint="@color/white"
+                                android:tint="@color/green"
                                 android:layout_gravity="center"
                                 android:layout_marginStart="5dp"
                                 android:layout_marginLeft="5dp"
@@ -128,25 +123,24 @@
                                 android:layout_marginStart="3dp"
                                 android:layout_marginLeft="3dp"
                                 android:layout_marginEnd="10dp"
-                                android:backgroundTint="@color/black"
+                                android:textColor="@color/white"
                                 android:layout_marginRight="10dp"
-                                android:drawableRight="@android:drawable/arrow_down_float"
                                 android:textAlignment="center" />
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="154dp"
-                            android:layout_height="43dp"
-                            android:layout_marginStart="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
                             android:background="@drawable/spinner_background"
-                            android:layout_marginLeft="10dp">
+                            android:layout_marginStart="5dp">
 
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:tint="@color/white"
+                                android:tint="@color/green"
                                 android:layout_marginStart="5dp"
                                 android:layout_marginLeft="5dp"
                                 android:src="@drawable/ic_time"/>
@@ -159,10 +153,9 @@
                                 android:id="@+id/fromTime"
                                 android:layout_marginStart="3dp"
                                 android:layout_marginLeft="3dp"
-                                android:backgroundTint="@color/black"
+                                android:textColor="@color/white"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginRight="10dp"
-                                android:drawableRight="@android:drawable/arrow_down_float"
                                 android:textAlignment="center" />
                         </LinearLayout>
 
@@ -176,13 +169,13 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:textColor="@color/white"
+                            android:layout_marginTop="20dp"
+                            android:textColor="@color/button_color_1"
                             android:layout_marginBottom="10dp"
                             android:layout_weight="0.5"
                             android:gravity="center"
                             android:text="@string/to_date_time"
-                            android:textSize="20sp" />
+                            android:textSize="16sp" />
 
                     </LinearLayout>
 
@@ -195,47 +188,44 @@
 
 
                         <LinearLayout
-                            android:layout_width="154dp"
-                            android:layout_height="43dp"
-                            android:layout_marginStart="10dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:background="@drawable/spinner_background"
-                            android:layout_marginLeft="10dp">
+                            android:background="@drawable/spinner_background">
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginStart="5dp"
                                 android:layout_marginLeft="5dp"
-                                android:tint="@color/white"
+                                android:tint="@color/green"
                                 android:src="@drawable/ic_calender"/>
                             <TextView
                                 style="@android:style/Widget.TextView.SpinnerItem"
                                 android:layout_width="match_parent"
                                 android:layout_height="43dp"
                                 android:id="@+id/ToDate"
+                                android:textColor="@color/white"
                                 android:gravity="center"
                                 android:layout_marginStart="3dp"
                                 android:layout_marginLeft="3dp"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginRight="10dp"
-                                android:backgroundTint="@color/white"
-                                android:drawableRight="@android:drawable/arrow_down_float"
                                 android:textAlignment="center" />
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="154dp"
+                            android:layout_width="0dp"
                             android:layout_height="43dp"
-                            android:layout_marginStart="10dp"
+                            android:layout_marginStart="5dp"
                             android:layout_weight="1"
                             android:background="@drawable/spinner_background"
-                            android:layout_marginLeft="10dp">
+                            android:layout_marginLeft="5dp">
 
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:tint="@color/white"
+                                android:tint="@color/green"
                                 android:layout_marginStart="5dp"
                                 android:layout_marginLeft="5dp"
                                 android:layout_gravity="center"
@@ -249,10 +239,9 @@
                                 android:gravity="center"
                                 android:layout_marginStart="3dp"
                                 android:layout_marginLeft="3dp"
-                                android:backgroundTint="@color/black"
+                                android:textColor="@color/white"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginRight="10dp"
-                                android:drawableRight="@android:drawable/arrow_down_float"
                                 android:textAlignment="center" />
                         </LinearLayout>
 
@@ -275,14 +264,15 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
+                        android:textColor="@color/button_color_1"
                         android:text="Half Day" />
 
                     <CheckBox
                         android:layout_weight="1"
                         android:layout_gravity="center"
                         android:id="@+id/btnCheck"
-                        android:layout_width="80dp"
-                        android:layout_height="50dp"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
                         android:background="@drawable/checkbox_selector"
                         android:button="@null"
                         android:gravity="center"
@@ -304,9 +294,7 @@
                         android:id="@+id/spHalf"
                         android:layout_marginStart="3dp"
                         android:layout_marginLeft="3dp"
-                        android:layout_marginEnd="10dp"
                         android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
                         android:drawableRight="@android:drawable/arrow_down_float"
                         android:textAlignment="center" />
                     </LinearLayout>
@@ -317,9 +305,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
                     android:layout_marginTop="2dp"
-                    android:layout_marginRight="5dp"
                     android:layout_marginBottom="2dp"
                     android:orientation="vertical">
                     <TextView
@@ -328,6 +314,7 @@
                         android:layout_gravity="start"
                         android:layout_weight="1"
                         android:padding="10dp"
+                        android:textColor="@color/button_color_1"
                         android:paddingStart="22dp"
                         android:paddingLeft="22dp"
                         android:text="Reason" />
@@ -335,9 +322,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
-                        android:layout_marginTop="2dp"
                         android:layout_marginRight="5dp"
-                        android:layout_marginBottom="2dp"
                         android:background="@drawable/spinner_background"
                         android:orientation="vertical">
 
@@ -345,7 +330,7 @@
                             android:id="@+id/etReason"
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
-                            android:layout_margin="10dp"
+                            android:layout_margin="5dp"
                             android:layout_gravity="center"
                             android:layout_weight="1"
                             android:textColorHint="@color/black" />
@@ -369,6 +354,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:textColor="@color/button_color_1"
                         android:text="Substitute" />
 
                     <LinearLayout

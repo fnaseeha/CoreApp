@@ -38,48 +38,34 @@ public class UpdateAppsPopup {
         dialog = new Dialog(context, R.style.CustomDialog);
         LayoutInflater i = LayoutInflater.from(context);
         View view = i.inflate(R.layout.dialog_confirmation, null);
-        //dialog = bDialog;
-
-//        ((ViewGroup)dialog.getWindow().getDecorView())
-//                .getChildAt(0).startAnimation(AnimationUtils.loadAnimation(
-//                context,android.R.anim.slide_in_left));
-
-//        ((ViewGroup)dialog.getWindow().getDecorView())
-//                .getChildAt(0).setAnimation(AnimationUtils.loadAnimation(
-//                context,android.R.style.Dialog_));
 
         dialog.getWindow()
                 .getAttributes().windowAnimations = R.style.DialogAnimation;
 
 
         TextView message = (TextView) view.findViewById(R.id.tv_message);
-        Button btnCancel = (Button) view.findViewById(R.id.btn_cancel);
+        //Button btnCancel = (Button) view.findViewById(R.id.btn_cancel);
         Button btnOk = (Button) view.findViewById(R.id.btn_ok);
 
 
-        switch (k) {
+        if (k == 1) {//  btnCancel.setText("No");
+            // btnCancel.setVisibility(View.INVISIBLE);
+           // btnOk.setText("OK");
+            // message.setText("Update is Available. \n Do you want to Update?");
 
-            case 1:
-                btnCancel.setText("No");
-                btnOk.setText("Yes");
-                message.setText("Update is Available. \n Do you want to Update?");
+            message.setText("Please update the app to the latest version to enjoy all the new features");
 
-                btnOk.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        deleget.onButtonClcik(1);
+            btnOk.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    deleget.onButtonClcik(1);
 
-                        dialog.dismiss();
+                    dialog.dismiss();
 
-                    }
-                });
-
-
-                break;
-
-
+                }
+            });
         }
-
+/*
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,7 +73,7 @@ public class UpdateAppsPopup {
                 dialog.dismiss();
 
             }
-        });
+        });*/
 
 
         try {

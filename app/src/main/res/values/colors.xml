@@ -29,6 +29,8 @@
     <color name="black">#000000</color>
 
     <color name="green">#9dd973</color>
+    <color name="green_okay">#367C07</color>
+    <color name="green_okay_light">#4CAF08</color>
     <color name="green_dark">#87ba62</color>
 
     <color name="disabled_color">#c2bbbb</color>

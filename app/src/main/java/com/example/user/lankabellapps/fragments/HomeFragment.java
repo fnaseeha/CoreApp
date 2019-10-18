@@ -1,6 +1,7 @@
 package com.example.user.lankabellapps.fragments;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Notification;
 import android.app.ProgressDialog;
@@ -35,6 +36,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -160,9 +162,6 @@ public class HomeFragment extends Fragment implements MainMenuAdapter.SingleItem
         mProgressDialog.setMessage("Updating Applications");
         mProgressDialog.setCancelable(false);
         mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-
-
-
 
         fab = (FloatingActionButton) view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -420,19 +419,31 @@ public class HomeFragment extends Fragment implements MainMenuAdapter.SingleItem
                     try {
                         info = manager.getPackageInfo(a.getPackagename(), 0);
                     } catch (PackageManager.NameNotFoundException e) {
-                        //e.printStackTrace();
-                        System.out.println(e);
+                        e.printStackTrace();
+                      //  System.out.println(e);
                     }
-                    String version = info.versionName;
-                    System.out.println(a.getAppName() + "  " + version + "  " + a.getVersion());
 
-                    if (!a.getVersion().equals(version)) {
-                        AvailableApps availableApps = new AvailableApps();
-                        availableApps.updateUpdateAvailable(a.getAppId(), 1);
+                    String version = info.versionName;
+                    String newversion = version;
+                    if (version.length() == 5) {
+                        newversion = version.substring(0, 3) + version.substring(4);
+                    } else if (version.length() == 7) {
+                        newversion = version.substring(0, 3) + version.substring(4, 5) + version.substring(6, 7);
                     } else {
+                        newversion = version;
+                    }
+                    System.out.println(a.getAppName() + "* ve " + version + "a.g  " + a.getVersion()+"newversion "+newversion);
+
+                    if(Float.parseFloat(newversion)>= Float.parseFloat(a.getVersion())){
+                        //no need to update
                         AvailableApps availableApps = new AvailableApps();
                         availableApps.updateUpdateAvailable(a.getAppId(), 0);
+                    }else {
+                        //forcefully update
+                        AvailableApps availableApps = new AvailableApps();
+                        availableApps.updateUpdateAvailable(a.getAppId(), 1);
                     }
+
                 }
             }
         } catch (Exception e) {
@@ -504,16 +515,23 @@ public class HomeFragment extends Fragment implements MainMenuAdapter.SingleItem
 
         mainMenuObjectList.clear();
 
-        mainMenuObjectList.add(new MainMenuObject("Attendance", "1", R.drawable.attendence_icon, "", 0, ""));
+        mainMenuObjectList.add(new MainMenuObject("Attendance\n&\nLeave", "1", R.drawable.attendence_icon, "", 0, ""));
 //        mainMenuObjectList.add(new MainMenuObject(availableAppsList.get(), "2", R.drawable.tsr));
 //        mainMenuObjectList.add(new MainMenuObject("Collector App", "3", R.drawable.collector_app));
 
         for (AvailableApps a : availableInstalled) {
             // if (!a.getAppId().equals("1") || !a.getAppId().equals("2") || !a.getAppId().equals("3")) {
-            mainMenuObjectList.add(new MainMenuObject(a.getAppName(), a.getAppId(), CommonHelperClass.getApplicationIcon(getActivity(), a.getIconName()), a.getPackagename(), a.getUpdateAvailable(), a.getIconUrl()));
+            mainMenuObjectList.add(new MainMenuObject(
+                    a.getAppName(),
+                    a.getAppId(),
+                    CommonHelperClass.getApplicationIcon(getActivity(),
+                    a.getIconName()),
+                    a.getPackagename(),
+                    a.getUpdateAvailable(),
+                    a.getIconUrl()));
             //}
             System.out.println("********");
-            System.out.println("* "+a.getAppName()+" "+a.getVersion()+" "+a.getUrl());
+            System.out.println("* "+a);
             System.out.println("********");
         }
 
@@ -525,6 +543,38 @@ public class HomeFragment extends Fragment implements MainMenuAdapter.SingleItem
             System.out.println(e);
         }
 
+    }
+    @SuppressLint("SetTextI18n")
+    private void showAlertDialog(int leave_attendence_icons) {
+        final AlertDialog dialogBuilder = new AlertDialog.Builder(getActivity()).create();
+        View layoutView = getLayoutInflater().inflate(leave_attendence_icons, null);
+        dialogBuilder.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+        LinearLayout ic_attendance = layoutView.findViewById(R.id.ic_attendance);
+        LinearLayout ic_leave = layoutView.findViewById(R.id.ic_leave);
+
+        dialogBuilder.setView(layoutView);
+        dialogBuilder.show();
+
+        ic_attendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogBuilder.dismiss();
+                Intent intetn = new Intent(getActivity(), AttendenceActivity.class);
+                startActivity(intetn);
+                getActivity().overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
+
+            }
+        });
+        ic_leave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialogBuilder.dismiss();
+                Intent intetn = new Intent(getActivity(), LeaveMainFragment.class);
+                startActivity(intetn);
+                getActivity().overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
+            }
+        });
     }
 
     private void init() {
@@ -660,10 +710,10 @@ public class HomeFragment extends Fragment implements MainMenuAdapter.SingleItem
             System.out.println(selectedItem.itemKey);
 
             if (position == 0) {
+               // showAlertDialog(R.layout.leave_attendence_icons);
                 Intent intetn = new Intent(getActivity(), AttendenceActivity.class);
                 startActivity(intetn);
                 getActivity().overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
-
             } else {
 
                 if (selectedItem.updateAvailable == 1) {
@@ -790,7 +840,7 @@ public class HomeFragment extends Fragment implements MainMenuAdapter.SingleItem
             downloadTask.execute("http://" + availableAppsList.get(0).getUrl().trim());
         } catch (Exception e) {
             System.out.println(e);
-            Toast.makeText(getActivity(), "Check the internet connection...", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "Check the internet connection..."+e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -872,7 +922,7 @@ public class HomeFragment extends Fragment implements MainMenuAdapter.SingleItem
     public void getAccountsListFaile(String message) {
         if (new NetworkCheck().NetworkConnectionCheck(getActivity())) {
             //downloadAccounts();
-            coloredSnackbar.showSnackBar("Pleas Refresh...", coloredSnackbar.TYPE_WARING, 2000);
+            coloredSnackbar.showSnackBar("Please Refresh...", coloredSnackbar.TYPE_WARING, 2000);
         } else {
             coloredSnackbar.showSnackBar("Check your internet connection...", coloredSnackbar.TYPE_ERROR, 2000);
         }
@@ -899,7 +949,7 @@ public class HomeFragment extends Fragment implements MainMenuAdapter.SingleItem
         //checkUpdateStatus();
         if (new NetworkCheck().NetworkConnectionCheck(getActivity())) {
             //downloadAccounts();
-            coloredSnackbar.showSnackBar("Pleas Refresh...", coloredSnackbar.TYPE_WARING, 2000);
+            coloredSnackbar.showSnackBar("Please Refresh...", coloredSnackbar.TYPE_WARING, 2000);
         } else {
             coloredSnackbar.showSnackBar("Check your internet connection...", coloredSnackbar.TYPE_ERROR, 2000);
         }

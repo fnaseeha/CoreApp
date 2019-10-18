@@ -29,10 +29,11 @@ public class LeaveMainFragment extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.tabs);
 
         tabLayout.addTab(tabLayout.newTab().setText("Leave Request"));
-        tabLayout.addTab(tabLayout.newTab().setText("Substitute Approval"));
-        tabLayout.addTab(tabLayout.newTab().setText("Reporting Approval"));
+        tabLayout.addTab(tabLayout.newTab().setText("Substitute Approval(6)"));
+        tabLayout.addTab(tabLayout.newTab().setText("Reporting Approval(5)"));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.green));
 
         mSectionsPageAdapter = new SectionsPagerAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
         mViewPager.setAdapter(mSectionsPageAdapter);

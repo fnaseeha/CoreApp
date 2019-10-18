@@ -81,6 +81,8 @@ public class Featch implements GetAppDetailsToUserSync.GetAppilcationEvents {
                                 availableApps.setIconName("tsr");
                             }else if(row.getString("App_id").equals("6")){
                                 availableApps.setIconName("sales_icon");
+                            }else if(row.getString("App_id").equals("7")){
+                                availableApps.setIconName("fault_icon");
                             }else{
                                 availableApps.setIconName("common_icon");
                             }
@@ -92,8 +94,6 @@ public class Featch implements GetAppDetailsToUserSync.GetAppilcationEvents {
                             availableApps.setUpdateAvailable(0);
 
                             availableApps.save();
-
-
 
                         } catch (JSONException e) {
                             e.printStackTrace();

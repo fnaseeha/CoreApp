@@ -31,7 +31,7 @@
             android:id="@+id/leave"
             android:icon="@drawable/default_icon"
             android:title="Leave"
-            android:visible="true" />
+            android:visible="false" />
 
         <item android:id="@+id/summary" android:icon="@drawable/summary"
             android:title="Daily Summary" android:visible="true" />

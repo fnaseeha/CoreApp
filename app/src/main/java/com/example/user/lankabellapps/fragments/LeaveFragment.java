@@ -1,8 +1,13 @@
 package com.example.user.lankabellapps.fragments;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -17,7 +23,9 @@ import android.widget.Toast;
 
 import com.example.user.lankabellapps.R;
 import com.example.user.lankabellapps.helper.DateTimeSelectView;
+import com.example.user.lankabellapps.popups.UpdateAppsPopup;
 
+import static android.R.layout.browser_link_context_header;
 import static android.R.layout.simple_spinner_dropdown_item;
 
 public class LeaveFragment extends Fragment  {
@@ -31,7 +39,8 @@ public class LeaveFragment extends Fragment  {
     String[] arraySpinner2;
     String[] arraySpinner3;
 
-    private Button btnTEST;
+    private Button btnSubmit,btnClear;
+    EditText etReason;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -46,10 +55,11 @@ public class LeaveFragment extends Fragment  {
         fromTime = view.findViewById(R.id.fromTime);
         ToDate = view.findViewById(R.id.ToDate);
         ToTime = view.findViewById(R.id.ToTime);
+        etReason = view.findViewById(R.id.etReason);
 
         arraySpinner = new String[]{"Annual", "Medical", "Casual", "Special Medical"};
-        arraySpinner2 = new String[]{"First Half", "Second Half"};
-        arraySpinner3 = new String[]{"ABC","DES", "DNSH", "NML", "ISR", "ZFR"};
+        arraySpinner2 = new String[]{"First Half ", "Second Half "};
+        arraySpinner3 = new String[]{"Ann","Taro", "Lee", "Roosa", "Moosa", "Nisa"};
 
         ArrayAdapter<String> adapter = null;
 
@@ -117,16 +127,96 @@ public class LeaveFragment extends Fragment  {
         });
 
 
-        btnTEST = (Button) view.findViewById(R.id.btnSubmit);
+        btnSubmit = (Button) view.findViewById(R.id.btnSubmit);
+        btnClear = (Button) view.findViewById(R.id.btnClear);
 
-        btnTEST.setOnClickListener(new View.OnClickListener() {
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "TESTING BUTTON CLICK 1", Toast.LENGTH_SHORT).show();
+                showConfirmation(1);
+
+
             }
         });
 
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showConfirmation(2);
+            }
+        });
+
+
         return view;
+    }
+
+    private void showConfirmation(int num) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle("Confirm");
+        builder.setPositiveButton("OK", null);
+
+
+       /* final Dialog dialog = new Dialog(getActivity(), R.style.CustomDialog);
+        LayoutInflater i = LayoutInflater.from(getContext());
+        View view = i.inflate(R.layout.dialog_confirmation, null);
+
+        dialog.getWindow()
+                .getAttributes().windowAnimations = R.style.DialogAnimation;
+
+
+        TextView message = (TextView) view.findViewById(R.id.tv_message);
+        Button btnCancel = (Button) view.findViewById(R.id.btn_cancel);
+        Button btnOk = (Button) view.findViewById(R.id.btn_ok);*/
+
+        switch(num) {
+            case 1: {
+                builder.setMessage("Do you want to Request a Leave?");
+
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                        clear();
+                        Toast.makeText(getActivity(),"Submitted",Toast.LENGTH_LONG).show();
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                            }
+                        });
+                builder.show();
+                break;
+            }
+            case 2: {
+                builder.setMessage("Do you want to Clear?");
+
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                        clear();
+
+                    }
+                });
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                    }
+                });
+                builder.show();
+                break;
+            }
+        }
+    }
+
+    private void clear() {
+        fromDate.setText("");
+        ToDate.setText("");
+        fromTime.setText("");
+        ToTime.setText("");
+        etReason.setText("");
+        btnCheck.setChecked(false);
+        llhalfDay.setVisibility(View.INVISIBLE);
     }
 
 

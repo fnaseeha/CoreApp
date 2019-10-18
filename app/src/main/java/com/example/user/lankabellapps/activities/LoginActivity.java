@@ -166,7 +166,7 @@ public class LoginActivity extends AppCompatActivity implements LoginSync.LoginS
                 }
 
             } else {
-                System.out.println("* timeCapList.get(0).getDate().equals(\"\")");
+                System.out.println("* timeCapList.get(0).getLeavedate().equals(\"\")");
             }
         } else {
             System.out.println("* timeCapList is Empty");
@@ -255,7 +255,7 @@ public class LoginActivity extends AppCompatActivity implements LoginSync.LoginS
 
                                 long currentTime = new Date().getTime();
 
-                                //  long timeDifference = currentTime - (TimeFormatter.changeStringTimeToLong(timeCapListLoginTime.get(0).getDate(), "yyyy-MM-dd HH:mm:ss"));
+                                //  long timeDifference = currentTime - (TimeFormatter.changeStringTimeToLong(timeCapListLoginTime.get(0).getLeavedate(), "yyyy-MM-dd HH:mm:ss"));
 
                                 if (false) { //timeDifference >= 1800000 //false
                                     LoginSync loginSync = new LoginSync(this);
@@ -402,8 +402,11 @@ public class LoginActivity extends AppCompatActivity implements LoginSync.LoginS
                     Integer diff = Minutes.minutesBetween(phoneDate, serverDate).getMinutes();
 
                     Log.d("Get Phone date :", phoneDate.toString());
-                    long diffN = Math.abs(diff);
 
+                    long diffN = Math.abs(diff);
+                    System.out.println("* diffN "+diffN);
+                    System.out.println("* serverDate "+serverDate);
+                    System.out.println("* phoneDate "+phoneDate);
                     if ((diffN < 10)) {
 
                         loginConfirm();
